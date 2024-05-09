@@ -39,11 +39,12 @@ if __name__ == "__main__":
     parser.add_argument('--data_dir', default='../data/', type=str, help='path to the data directory')
     parser.add_argument('--dataset', default='nyt', type=str, help='name of the dataset')
     parser.add_argument('--seed_taxo', default='seed_taxo', type=str, help='name of the given taxonomy')
+    parser.add_argument('--output', default='../data/output/', type=str, help='path to the final output folder')
     parser.add_argument('--N', default=10, type=int, help='number of terms included.')
     args = parser.parse_args()
 
     root_dir = os.path.join(args.data_dir, args.dataset, 'root_' + args.seed_taxo)
-    output_file = '%s_%s_output.txt' % (args.dataset, args.seed_taxo)
+    output_file = '%s%s_%s_output.txt' % (args.output, args.dataset, args.seed_taxo)
 
     recursion(root_dir, output_file, args.N)
 
