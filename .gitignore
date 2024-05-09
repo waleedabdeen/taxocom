@@ -1,5 +1,10 @@
 __pycache__
 .venv
+#Please refer to the readme to find the data
 data/arxiv
 data/nyt
+data/output
 code/spherecluster
+#the following two files are commpiled when running the code
+code/jose
+code/josd
