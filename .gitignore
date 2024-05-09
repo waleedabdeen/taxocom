@@ -1,5 +1,6 @@
 __pycache__
 .venv
+.vscode
 #Please refer to the readme to find the data
 data/arxiv
 data/nyt
